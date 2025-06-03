@@ -1,0 +1,143 @@
+/* ============================================= */
+/*               Web 포트폴리오 공통 CSS         */
+/* ============================================= */
+
+/* 1) 모든 요소 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2) 본문(body) 기본 설정: 글꼴, 배경색, 기본 여백 지정 */
+body {
+    font-family: 'Malgun Gothic', Dotum, Arial, sans-serif;
+    background-color: #f8f9fa; /* 연한 회색 배경 */
+    color: #333;               /* 진한 회색 글자 */
+    line-height: 1.6;          /* 줄간격 1.6 */
+    padding: 20px;             /* 화면 안쪽에 20px 여백 */
+}
+
+/* 3) 헤더(header) 스타일: 배경색, 글자색, 안쪽 여백, 아래쪽 여백 */
+header {
+    background-color: #004aad; /* 진한 파란색 배경 */
+    color: white;              /* 헤더 글자 흰색 */
+    padding: 20px 30px;        /* 위아래 20px, 좌우 30px */
+    margin-bottom: 30px;       /* 헤더 아래에 30px 마진 */
+    position: relative;        /* 고정 레이아웃을 원할 때 position: fixed 로 바꿔도 됩니다 */
+}
+
+/* 4) 헤더 안 제목(h1) 밑 여백 */
+header h1 {
+    margin-bottom: 10px; /* 제목 밑 10px 여백 */
+    font-size: 2rem;     /* 제목 글자 크기 */
+}
+
+/* 5) 네비게이션 링크(nav a) 스타일: 흰 글자, 밑줄 제거, 오른쪽 여백 */
+nav a {
+    color: white;          /* 링크 글자 흰색 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-right: 30px;    /* 오른쪽 30px 여백 */
+    font-weight: bold;     /* 글자 진하게 */
+    font-size: 1rem;       /* 링크 글자 크기 */
+}
+
+/* 6) 활성 메뉴(active) 및 :hover 시 밑줄 표시 */
+nav a.active,
+nav a:hover {
+    text-decoration: underline; /* 마우스 올리거나 현재 페이지면 밑줄 */
+}
+
+/* 7) 메인 섹션(main section) 스타일: 카드 배경, 패딩, 둥근 모서리, 그림자, 폭 조절 */
+/*    width: 80% + max-width:800px 을 주어, 화면이 좁으면 80%만, 넓으면 최대 800px 으로 확장 */
+main section {
+    background-color: white;               /* 흰 배경 카드 */
+    padding: 30px 40px;                    /* 안쪽 여백 위아래 30px, 좌우 40px */
+    border-radius: 10px;                   /* 모서리 둥글게 (10px) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 은은한 그림자 효과 */
+    width: 80%;                            /* 화면 너비의 80% 사용 */
+    max-width: 800px;                      /* 최대 폭 800px 로 제한 */
+    margin: 0 auto 30px auto;             /* 가로 중앙 정렬, 아래쪽 30px 마진 */
+    text-align: center;                    /* 내부 텍스트 가운데 정렬 */
+}
+
+/* 8) index.html 프로필 사진 스타일 */
+main section img {
+    width: 140px;      /* 프로필 사진 가로 140px */
+    height: 140px;     /* 프로필 사진 세로 140px */
+    border-radius: 50%;/* 둥근 원형으로 */
+    margin-bottom: 20px; /* 아래쪽 20px 여백 */
+    object-fit: cover;   /* 비율 유지하며 꽉 채우기 */
+}
+
+/* 9) main section 안 제목(h2)의 간격 및 크기 */
+main section h2 {
+    margin: 0 0 15px 0; /* 위쪽 0, 오른쪽 0, 아래 15px, 왼쪽 0 여백 */
+    font-size: 1.8rem;  /* 글자 크기 1.8rem */
+    color: #333;        /* 진한 회색 글자 */
+}
+
+/* 10) main section 안 일반 문단(p) 간격과 스타일 */
+main section p {
+    margin: 8px 0;    /* 위아래 8px 여백 */
+    color: #555;      /* 약간 연한 회색(#555) */
+    font-size: 1rem;  /* 글자 크기 1rem */
+    line-height: 1.5; /* 줄간격 1.5 */
+}
+
+/* 11) footer(푸터) 스타일: 위쪽 여백, 가운데 정렬, 작은 글씨, 연한 글자색 */
+footer {
+    margin-top: 20px;    /* 위쪽 20px 여백 */
+    text-align: center;  /* 가운데 정렬 */
+    font-size: 0.9rem;   /* 글자 크기 0.9rem */
+    color: #777;         /* 연한 회색 글자 */
+}
+
+/* 12) 입력(input), 텍스트 영역(textarea) 기본 스타일: 너비, 패딩, 테두리, 모서리 등 */
+input,
+textarea {
+    width: 100%;          /* 부모 폭 100% */
+    padding: 8px 10px;    /* 안쪽 여백 위아래 8px, 좌우 10px */
+    border: 1px solid #bbb; /* 연한 회색(#bbb) 테두리 */
+    border-radius: 4px;   /* 모서리 둥글게 (4px) */
+    font-size: 1rem;      /* 글자 크기 1rem */
+    font-family: inherit; /* 부모 글꼴 상속 */
+    margin-bottom: 12px;  /* 아래쪽 12px 여백 */
+}
+
+/* 13) 버튼(button) 스타일: 배경색, 글자색, 패딩, 모서리, 커서, hover 효과 */
+button {
+    background-color: #004aad; /* 진한 파란색 배경 */
+    color: white;              /* 버튼 글자 흰색 */
+    border: none;              /* 테두리 제거 */
+    padding: 10px 20px;        /* 안쪽 여백 위아래 10px, 좌우 20px */
+    border-radius: 4px;        /* 모서리 둥글게 (4px) */
+    cursor: pointer;           /* 커서 포인터로 변경 */
+    font-weight: bold;         /* 버튼 글자 진하게 */
+    transition: background-color 0.3s; /* 부드러운 배경색 전환 */
+}
+
+button:hover {
+    background-color: #003377; /* 마우스 올릴 때 더 진한 파란색 */
+}
+
+/* 14) 프로젝트 페이지 내 동영상(video) 중앙 정렬 및 크기 제한 (선택) */
+.video-wrapper,
+.video-container {
+    margin: 30px auto; /* 위아래 30px 여백, 가로 중앙 정렬 */
+    text-align: center;
+}
+
+video {
+    width: 100%;       /* 부모 컨테이너의 너비를 모두 채움 */
+    max-width: 640px;  /* 최대 가로폭 640px */
+    border: 2px solid #ccc; /* 회색 테두리 (선택사항) */
+    border-radius: 8px;     /* 모서리 둥글게 (8px) */
+}
+
+.video-container iframe {
+    width: 100%;       /* 부모 컨테이너의 너비를 모두 채움 */
+    height: 360px;     /* 높이 360px (16:9 비율) */
+    border: none;      /* 테두리 제거 */
+    border-radius: 8px;/* 모서리 둥글게 (8px) */
+}
